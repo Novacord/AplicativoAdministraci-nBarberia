@@ -20,4 +20,15 @@ Este es un aplicativo diseñado para administrar el control de entradas y salida
    - Cálculo automático de las ganancias diarias, mensuales y anuales para cada barbero, teniendo en cuenta los servicios prestados.
 
 ## Tablas de la base de datos
+<<<<<<< HEAD
 ![](./img%20db/CapturaDef.PNG)
+=======
+
+1.  la primera relacion de tablas es la relacion de trabajos con servicios y barberos .
+
+   ![](img%20db/Captura.PNG)
+
+2.  la segunda relacion de tablas es la relacion de producto con entradas y salidas.
+
+   ![](img%20db/Captura1.PNG)
+>>>>>>> d24df751f293d98b4598cd5d1e5bee5931cc87c5
