@@ -1,8 +1,13 @@
 import dotenv from 'dotenv'
 import express from 'express';
+import appBarberos from './routers/barberos.js';
 
 dotenv.config();
 const app = express();
+
+app.use(express.json());
+
+app.use("/registrar-usuario", appBarberos);
 
 const config = JSON.parse(process.env.MY_SERVER);
 
