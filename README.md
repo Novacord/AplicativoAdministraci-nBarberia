@@ -165,12 +165,6 @@ registro exitoso
 El "nombre del parametro" no cumple con el formato
 ```
 
-- 
-
-```
-registro exitoso
-```
-
 - **Error de Solicitud (Código de Estado 422)**: es que unos de los parámetros no esta y es obligatorio ponerlo un ejemplo:
 
 ```
