@@ -21,3 +21,25 @@ Este es un aplicativo diseñado para administrar el control de entradas y salida
 
 ## Tablas de la base de datos
 ![](./img%20db/CapturaDef.PNG)
+
+# Servidor Express
+
+el proyecto contiene una configuración básica para un servidor Express utilizando la librería `dotenv` para gestionar variables de entorno. La configuración del servidor, incluyendo el nombre del host y el puerto, se carga desde un archivo JSON y se utiliza para iniciar el servidor.
+
+- para poder utilizar las librerías utilizada deben instalarlas con npm:
+
+```bash
+npm i
+```
+
+- Crea un archivo `.env` en el directorio raíz del proyecto y agrega el siguiente contenido:
+
+```dotevn
+MY_SERVER={"hostname": "localhost", "port": 3000}
+```
+
+- para inicializar el servidor de express:
+
+```bash
+npm run dev
+```
