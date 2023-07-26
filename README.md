@@ -71,6 +71,10 @@ CREATE TABLE UsuarioRoles (
 -- Continúa con la creación de las demás tablas...
 ```
 
+## Tener en cuenta
+
+si quieres probar el aplicativo con datos inserte  los datos en el archivo llamado datas en la carpeta llamada db.
+
 # Servidor Express
 
 el proyecto contiene una configuración básica para un servidor Express utilizando la librería `dotenv` para gestionar variables de entorno. La configuración del servidor, incluyendo el nombre del host y el puerto, se carga desde un archivo JSON y se utiliza para iniciar el servidor.
@@ -116,7 +120,7 @@ npx tsc --init
 }
 ```
 
-- para pasar el typescript a javascript es:
+- para pasar el typescript a JavaScript es:
 
 ```bash
 npm run tsc
