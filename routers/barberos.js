@@ -27,8 +27,6 @@ appBarberos.get('/',(req, res) => {
 });
 appBarberos.post('/', middlewareBarberos, (req, res) => {
     let info = req.body;
-    console.log(info);
-    
     con.query(
         /*sql*/ `INSERT INTO Usuarios(Nombre, Documento, Correo, Clave, Activo) 
                  VALUES (?, ?, ?, ?, ?)`,

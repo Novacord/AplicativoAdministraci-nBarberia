@@ -75,7 +75,7 @@ CREATE TABLE UsuarioRoles (
 
 si quieres probar el aplicativo con datos inserte  los datos en el archivo llamado datas en la carpeta llamada db.
 
-# Servidor Express
+# Iniciar el proyecto
 
 el proyecto contiene una configuración básica para un servidor Express utilizando la librería `dotenv` para gestionar variables de entorno. La configuración del servidor, incluyendo el nombre del host y el puerto, se carga desde un archivo JSON y se utiliza para iniciar el servidor.
 
@@ -175,3 +175,50 @@ El "nombre del parametro" no cumple con el formato
 El parametro "nombre del parametro" es obligatorio
 ```
 
+# Ganancias del barbero y el administrador
+
+Este proyecto implementa un endpoint que permite calcular la ganancia de lo que gano el barbero y el administrador diaria, mensual y anual teniendo en cuenta que el barbero gana el 60% y el administrador gana el 40%
+
+## Características del Endpoint
+
+- Método: GET
+- Ruta del Endpoint: `/ganancias`
+- Permite listar la ganancia diaria, mensual y anualmente.
+
+## Obtener ganancia por año
+
+para obtener la ganancia por año debemos hacer una petición `/ganancias/year` mandando un parámetro year con el año que queremos saber cuanto gano con la siguiente estructura como ejemplo:
+
+```http
+http://HostName:port/ganancias/year?year=2023
+```
+
+## Obtener ganancia por mes
+
+para obtener la ganancia por mes debemos hacer una petición `/ganancias/month` mandando dos parámetro year con el año y month con el mes que queremos saber cuanto gano con la siguiente estructura como ejemplo:
+
+```http
+http://HostName:port/ganancias/month?year=2023&month=6
+```
+
+## Obtener ganancia por día
+
+para obtener la ganancia por mes debemos hacer una petición `/ganancias/day` mandando un parámetro date con la fecha exacta del día que queremos saber cuanto gano con la siguiente estructura como ejemplo:
+
+```http
+http://HostName:port/ganancias/day?date=2023-06-03
+```
+
+## Respuestas del Endpoint
+
+todos los datos listados esta en un json mostrara el id del usuario, el nombre del barbero, total que recaudo, cuanto gana el barbero y cuanto gana el administrador un ejemplo: 
+
+```json
+  {
+    "Usuario_Id": 4,
+    "Barber": "HECTOR JAVIER VILLEGAS CORREA",
+    "ValorTotal": "47000",
+    "Barbero": 28200,
+    "Administrador": 18800
+  }
+```
