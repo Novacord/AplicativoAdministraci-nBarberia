@@ -1,316 +1,275 @@
 USE barber;
 
-INSERT Roles (Nombre, FechaRegistro, Activo) VALUES (N'Administrador', CAST(N'2023-06-01T08:42:47.093' AS DateTime), 1);
-INSERT Roles (Nombre, FechaRegistro, Activo) VALUES (N'Secretaria', CAST(N'2022-06-13T08:42:58.397' AS DateTime), 1);
-INSERT Roles (Nombre, FechaRegistro, Activo) VALUES (N'Barbero', CAST(N'2022-06-13T08:43:35.190' AS DateTime), 1);
+INSERT INTO Roles (Nombre, FechaRegistro, Activo)
+VALUES 
+    (N'Administrador', CAST(N'2023-06-01T08:42:47.093' AS DateTime), 1),
+    (N'Secretaria', CAST(N'2022-06-13T08:42:58.397' AS DateTime), 1),
+    (N'Barbero', CAST(N'2022-06-13T08:43:35.190' AS DateTime), 1);
 
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'DANIEL NOVA', N'22222', N'macajoda@hotmail.com', N'mj2027', CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'GERMAN BERMUDEZ', N'1111', N'german7213hotmail.com', N'123', CAST(N'2022-06-29T13:37:57.207' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'ELKIN DIAZ', N'1757558', N'elkindiaz132@gmail.com', N'2912', CAST(N'2022-07-06T16:17:57.113' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'HECTOR JAVIER VILLEGAS CORREA', N'25715758', N'', N'2222', CAST(N'2022-07-06T16:19:51.470' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'JAIRO CASTRO', N'1098688344', N'jc7306973@gmail.com', N'3333', CAST(N'2022-07-06T16:22:59.767' AS DateTime), 1);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'WINKER MORA', N'20960612', N'winker_1994@hotmail.com', N'4444', CAST(N'2022-07-06T16:25:09.573' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'ANTHONY ROMERO', N'17700794', N'ANTONIROMER659@gmail.com', N'5555', CAST(N'2022-07-06T16:26:38.630' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'OSNIEL BLANCO', N'27896595', N'osnielblanco01@gmail.com', N'6666', CAST(N'2022-07-06T16:30:30.860' AS DateTime), 1);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'SAMUEL URBINA', N'27218492', N'zekaurbina@gmail.com', N'7777', CAST(N'2022-08-09T09:44:59.180' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'ANTHONY ROMERO', N'17700794', N'', N'9999', CAST(N'2022-10-15T12:38:57.003' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'GEORGE BARAJAS', N'91540083', N'jb4r4j4sgmail.com', N'8888', CAST(N'2023-02-03T05:41:47.440' AS DateTime), 0);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'EDUARDO BOLIVAR', N'31591052', N'', N'9999', CAST(N'2023-02-06T05:31:21.380' AS DateTime), 1);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'JESUS VILLALOBOS', N'1098675506', N'jb4r4j4sgmail.com', N'8888', CAST(N'2023-05-18T12:18:34.277' AS DateTime), 1);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'WILSON LEON', N'1007917690', N'jb4r4j4sgmail.com', N'9999', CAST(N'2023-06-16T10:49:34.533' AS DateTime), 1);
-INSERT Usuarios(Nombre, Documento, Correo, Clave, FechaRegistro, Activo) VALUES (N'DYLAN COTE', N'26781117', N'german7213hotmail.com', N'7777', CAST(N'2023-06-26T07:40:34.920' AS DateTime), 1);
+INSERT INTO Usuarios (Nombre, Documento, Correo, Clave, FechaRegistro, Activo)
+VALUES 
+    (N'DANIEL NOVA', N'22222', N'macajoda@hotmail.com', N'mj2027', CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    (N'GERMAN BERMUDEZ', N'1111', N'german7213hotmail.com', N'123', CAST(N'2022-06-29T13:37:57.207' AS DateTime), 0),
+    (N'ELKIN DIAZ', N'1757558', N'elkindiaz132@gmail.com', N'2912', CAST(N'2022-07-06T16:17:57.113' AS DateTime), 0),
+    (N'HECTOR JAVIER VILLEGAS CORREA', N'25715758', N'', N'2222', CAST(N'2022-07-06T16:19:51.470' AS DateTime), 0),
+    (N'JAIRO CASTRO', N'1098688344', N'jc7306973@gmail.com', N'3333', CAST(N'2022-07-06T16:22:59.767' AS DateTime), 1),
+    (N'WINKER MORA', N'20960612', N'winker_1994@hotmail.com', N'4444', CAST(N'2022-07-06T16:25:09.573' AS DateTime), 0),
+    (N'ANTHONY ROMERO', N'17700794', N'ANTONIROMER659@gmail.com', N'5555', CAST(N'2022-07-06T16:26:38.630' AS DateTime), 0),
+    (N'OSNIEL BLANCO', N'27896595', N'osnielblanco01@gmail.com', N'6666', CAST(N'2022-07-06T16:30:30.860' AS DateTime), 1),
+    (N'SAMUEL URBINA', N'27218492', N'zekaurbina@gmail.com', N'7777', CAST(N'2022-08-09T09:44:59.180' AS DateTime), 0),
+    (N'ANTHONY ROMERO', N'17700794', N'', N'9999', CAST(N'2022-10-15T12:38:57.003' AS DateTime), 0),
+    (N'GEORGE BARAJAS', N'91540083', N'jb4r4j4sgmail.com', N'8888', CAST(N'2023-02-03T05:41:47.440' AS DateTime), 0),
+    (N'EDUARDO BOLIVAR', N'31591052', N'', N'9999', CAST(N'2023-02-06T05:31:21.380' AS DateTime), 1),
+    (N'JESUS VILLALOBOS', N'1098675506', N'jb4r4j4sgmail.com', N'8888', CAST(N'2023-05-18T12:18:34.277' AS DateTime), 1),
+    (N'WILSON LEON', N'1007917690', N'jb4r4j4sgmail.com', N'9999', CAST(N'2023-06-16T10:49:34.533' AS DateTime), 1),
+    (N'DYLAN COTE', N'26781117', N'german7213hotmail.com', N'7777', CAST(N'2023-06-26T07:40:34.920' AS DateTime), 1);
+INSERT INTO UsuarioRoles (Usuario_Id, Rol_Id, FechaRegistro)
+VALUES 
+    (1, 1, CAST(N'2022-06-13T08:44:45.780' AS DateTime)),
+    (1, 3, CAST(N'2022-06-14T08:26:34.790' AS DateTime)),
+    (2, 3, CAST(N'2022-06-29T13:43:33.607' AS DateTime)),
+    (2, 1, CAST(N'2022-07-04T16:40:55.463' AS DateTime)),
+    (8, 3, CAST(N'2022-07-09T07:07:48.607' AS DateTime)),
+    (3, 3, CAST(N'2022-07-09T07:19:13.930' AS DateTime)),
+    (4, 3, CAST(N'2022-07-09T07:20:25.770' AS DateTime)),
+    (5, 3, CAST(N'2022-07-09T07:21:04.887' AS DateTime)),
+    (6, 3, CAST(N'2022-07-09T07:21:44.470' AS DateTime)),
+    (7, 3, CAST(N'2022-07-09T07:22:08.160' AS DateTime)),
+    (9, 3, CAST(N'2022-08-09T09:45:12.927' AS DateTime)),
+    (10, 3, CAST(N'2022-12-27T10:19:24.463' AS DateTime)),
+    (11, 3, CAST(N'2023-02-03T05:41:58.800' AS DateTime)),
+    (12, 3, CAST(N'2023-02-06T05:31:39.947' AS DateTime)),
+    (13, 3, CAST(N'2023-05-18T12:18:46.430' AS DateTime)),
+    (14, 3, CAST(N'2023-06-16T10:52:46.987' AS DateTime)),
+    (15, 3, CAST(N'2023-06-26T07:40:46.640' AS DateTime));
 
-INSERT UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (1, 1, CAST(N'2022-06-13T08:44:45.780' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (1, 3, CAST(N'2022-06-14T08:26:34.790' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (2, 3, CAST(N'2022-06-29T13:43:33.607' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (2, 1, CAST(N'2022-07-04T16:40:55.463' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (8, 3, CAST(N'2022-07-09T07:07:48.607' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (3, 3, CAST(N'2022-07-09T07:19:13.930' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (4, 3, CAST(N'2022-07-09T07:20:25.770' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (5, 3, CAST(N'2022-07-09T07:21:04.887' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (6, 3, CAST(N'2022-07-09T07:21:44.470' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (7, 3, CAST(N'2022-07-09T07:22:08.160' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (9, 3, CAST(N'2022-08-09T09:45:12.927' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (10, 3, CAST(N'2022-12-27T10:19:24.463' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (11, 3, CAST(N'2023-02-03T05:41:58.800' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (12, 3, CAST(N'2023-02-06T05:31:39.947' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (13, 3, CAST(N'2023-05-18T12:18:46.430' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (14, 3, CAST(N'2023-06-16T10:52:46.987' AS DateTime));
-INSERT  UsuarioRoles(Usuario_Id, Rol_Id, FechaRegistro) VALUES (15, 3, CAST(N'2023-06-26T07:40:46.640' AS DateTime));
-
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE CON CUCHILLA', 15000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE Y BARBA', 20000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE Y CEJAS', 17000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE BARBA Y CEJAS', 22000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('BARBA', 10000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CEJAS CON CUCHILLA', 4000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CEJAS CON CERA', 6000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CERQUILL0 SENCILLO', 4000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('APLICACION DE TINTE', 30000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CEPILLADO', 15000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('KERATINA', 250000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CEJAS SEMIPERMANENTES', 16000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('PESTAÑAS', 20000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE DE NIÑO', 12000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE YCEPILLADO', 30000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('MASCARILLA', 7000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('DECOLORACION', 88000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('BARBA Y TINTURA', 12000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE Y TINTURA', 25000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE CON CUCHILLA Y CEJAS', 17000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE CON CUCHILLA Y CEJAS CON CERA', 19000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE CON CUCHILLA,BARBA Y CEJAS CON CERA', 23000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('LIMPIEZA Y CORTE DE PUNTAS', 13000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT INTO Servicios (Nombre, Valor, FechaRegistro, Activo) VALUES ('CORTE,BARBA Y CEJAS CON CERA', 25000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-
-
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('BODY SPLASH', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('BODY SPLASH 2', 24000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('BODY SPLASH 3', 24000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CERA BARBER SHOP', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('GEL AFEITAR', 18000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('GEL ROLDA', 15000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('GEL XTREME', 3000, 6, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('MIOXIDIL', 40000, 2, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('TALCO BARBAROS', 20000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CERA BARBAROS', 25000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CUELLEROS', 5500, 10, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CUCHILLAS', 1500, 100, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('LOCION AFEITAR', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('TALCO M.F.', 20000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CERA BARBER SHOP', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('BODY SPLASH', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('GATORADE', 4000, 20, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('SPEED', 2000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('GASEOSA GRANDE', 5500, 22, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('GASEOSA PEQUEÑA', 2500, 20, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('JUGO HIT', 3000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('AGUA CON GAS', 2000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('AGUA SIN GAS', 2000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CORONITA', 4000, 70, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('HEINEKEN', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('BRUSWEISER', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('POKER', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('AGUILA', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('ABONO', 5000, 10, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('PORCENTAJE DE CORTE', 5600, 100, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('MULTA', 5000, 100, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CUCHILLAS', 1500, 50, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CERA BARBER SHOP', 25000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('LAVADO', 1000, 1000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
-INSERT Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo) VALUES ('CLUB COLOMBIA', 4000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
+INSERT INTO servicios (Nombre, Valor, FechaRegistro, Activo)
+VALUES 
+    ('CORTE CON CUCHILLA', 15000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE Y BARBA', 20000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE Y CEJAS', 17000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE BARBA Y CEJAS', 22000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('BARBA', 10000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CEJAS CON CUCHILLA', 4000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CEJAS CON CERA', 6000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CERQUILL0 SENCILLO', 4000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('APLICACION DE TINTE', 30000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CEPILLADO', 15000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('KERATINA', 250000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CEJAS SEMIPERMANENTES', 16000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('PESTAÑAS', 20000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE DE NIÑO', 12000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE YCEPILLADO', 30000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('MASCARILLA', 7000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('DECOLORACION', 88000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('BARBA Y TINTURA', 12000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE Y TINTURA', 25000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE CON CUCHILLA Y CEJAS', 17000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE CON CUCHILLA Y CEJAS CON CERA', 19000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE CON CUCHILLA,BARBA Y CEJAS CON CERA', 23000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('LIMPIEZA Y CORTE DE PUNTAS', 13000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORTE,BARBA Y CEJAS CON CERA', 25000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
 
 
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (1, 20, 1000, 'Prueba', CAST(N'2022-06-29T08:34:39.457' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (2, 10, 1000, '', CAST(N'2022-06-29T11:14:34.820' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (1, 40, 2000, N'', CAST(N'2023-06-01T16:23:26.433' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (30, 22, 3500, N'', CAST(N'2023-06-09T07:11:17.230' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 21, 2000, N'', CAST(N'2023-06-09T13:06:46.937' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (18, 1, 22000, N'', CAST(N'2023-06-09T14:06:14.373' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (25, 15, 2000, N'', CAST(N'2023-06-09T14:09:03.520' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (12, 1, 22000, N'', CAST(N'2023-06-09T14:09:48.683' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (17, 1, 22000, N'', CAST(N'2023-06-09T14:10:52.350' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (8, 1, 15000, N'', CAST(N'2023-06-09T14:11:14.257' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (9, 3, 3000, N'', CAST(N'2023-06-09T14:11:45.827' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (10, 2, 35000, N'', CAST(N'2023-06-09T14:12:02.323' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (11, 1, 20000, N'', CAST(N'2023-06-09T14:12:28.613' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (13, 5, 5500, N'', CAST(N'2023-06-09T14:12:53.370' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (14, 47, 1500, N'', CAST(N'2023-06-09T14:13:15.080' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (19, 14, 3500, N'', CAST(N'2023-06-09T14:13:37.107' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 30, 2000, N'', CAST(N'2023-06-09T14:16:46.030' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (21, 16, 4500, N'', CAST(N'2023-06-09T14:17:44.617' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (22, 17, 2000, N'', CAST(N'2023-06-09T14:18:16.097' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (23, 22, 2500, N'', CAST(N'2023-06-09T14:18:48.690' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 50, 3500, N'', CAST(N'2023-06-09T14:19:11.110' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (27, 21, 3500, N'', CAST(N'2023-06-09T14:19:34.467' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (29, 26, 3500, N'', CAST(N'2023-06-09T14:20:32.750' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (16, 1, 20000, N'', CAST(N'2023-06-09T14:26:54.520' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (15, 1, 22000, N'', CAST(N'2023-06-09T14:37:27.287' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (28, 24, 3500, N'', CAST(N'2023-06-09T15:59:25.873' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (31, 10, 5000, N'', CAST(N'2023-06-09T18:26:00.360' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (32, 100, 5200, N'', CAST(N'2023-06-10T11:50:05.927' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 1, 2000, N'', CAST(N'2023-06-10T11:57:07.070' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 24, 2000, N'', CAST(N'2023-06-11T07:09:28.607' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 4, 3500, N'', CAST(N'2023-06-11T15:51:47.230' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 1, 2000, N'', CAST(N'2023-06-11T15:54:29.650' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (25, 28, 2000, N'', CAST(N'2023-06-16T06:42:15.067' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (19, 42, 3500, N'', CAST(N'2023-06-22T09:31:21.033' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (22, 15, 2000, N'', CAST(N'2023-06-22T09:31:38.340' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (13, 5, 5500, N'', CAST(N'2023-06-23T09:55:51.867' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (23, 4, 2500, N'', CAST(N'2023-06-26T09:16:08.580' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (21, 16, 4500, N'', CAST(N'2023-06-26T09:16:30.637' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 24, 2000, N'', CAST(N'2023-06-26T09:16:50.063' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 24, 3500, N'', CAST(N'2023-06-01T11:44:16.053' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 24, 2000, N'', CAST(N'2023-06-02T09:15:56.477' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (25, 28, 2000, N'', CAST(N'2023-06-05T09:25:20.453' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (29, 1, 3500, N'', CAST(N'2023-06-06T19:23:42.097' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 1, 2000, N'', CAST(N'2023-06-06T19:25:21.823' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (25, 1, 2000, N'', CAST(N'2023-06-06T19:29:20.460' AS DateTime), 1);
-INSERT Entradas(Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (14, 1, 1500, N'', CAST(N'2023-06-06T19:31:59.017' AS DateTime), 1);
+INSERT INTO Productos (Nombre, ValorVenta, InventarioBase, FechaRegistro, Activo)
+VALUES 
+    ('BODY SPLASH', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('BODY SPLASH 2', 24000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('BODY SPLASH 3', 24000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CERA BARBER SHOP', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('GEL AFEITAR', 18000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('GEL ROLDA', 15000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('GEL XTREME', 3000, 6, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('MIOXIDIL', 40000, 2, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('TALCO BARBAROS', 20000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CERA BARBAROS', 25000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CUELLEROS', 5500, 10, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CUCHILLAS', 1500, 100, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('LOCION AFEITAR', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('TALCO M.F.', 20000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CERA BARBER SHOP', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('BODY SPLASH', 22000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('GATORADE', 4000, 20, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('SPEED', 2000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('GASEOSA GRANDE', 5500, 22, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('GASEOSA PEQUEÑA', 2500, 20, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('JUGO HIT', 3000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('AGUA CON GAS', 2000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('AGUA SIN GAS', 2000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CORONITA', 4000, 70, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('HEINEKEN', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('BRUSWEISER', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('POKER', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('AGUILA', 3500, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('ABONO', 5000, 10, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('PORCENTAJE DE CORTE', 5600, 100, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('MULTA', 5000, 100, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CUCHILLAS', 1500, 50, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CERA BARBER SHOP', 25000, 1, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('LAVADO', 1000, 1000, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1),
+    ('CLUB COLOMBIA', 4000, 24, CAST(N'2022-06-13T08:39:31.587' AS DateTime), 1);
 
 
 
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (13, 1, 5500, N'', CAST(N'2023-06-09T07:12:22.417' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 2, 2000, N'', CAST(N'2023-06-09T13:07:33.797' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (21, 1, 4500, N'', CAST(N'2023-06-09T14:46:05.523' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (14, 1, 1500, N'', CAST(N'2023-06-09T14:47:02.933' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 1, 2000, N'', CAST(N'2023-06-09T14:52:12.557' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (25, 2, 2000, N'', CAST(N'2023-06-09T14:52:34.593' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 4, 3500, N'', CAST(N'2023-06-09T14:58:48.190' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (21, 1, 4500, N'', CAST(N'2023-06-09T14:59:15.793' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 1, 2000, N'', CAST(N'2023-06-09T14:59:49.043' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 2, 3500, N'', CAST(N'2023-06-09T15:00:26.360' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (29, 2, 3500, N'', CAST(N'2023-06-09T15:00:46.613' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 2, 2000, N'', CAST(N'2023-06-09T15:01:06.690' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (23, 1, 2500, N'', CAST(N'2023-06-09T15:03:16.313' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (23, 1, 2500, N'', CAST(N'2023-06-09T15:42:32.060' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (25, 1, 2000, N'', CAST(N'2023-06-09T16:15:54.017' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (12, 1, 22000, N'', CAST(N'2023-06-09T17:17:28.717' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 1, 3500, N'', CAST(N'2023-06-09T17:18:24.430' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 1, 3500, N'', CAST(N'2023-06-09T17:18:46.053' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (30, 2, 3500, N'', CAST(N'2023-06-09T17:19:00.490' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (31, 1, 10000, N'', CAST(N'2023-06-09T18:26:17.327' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 2, 2000, N'', CAST(N'2023-06-09T18:48:15.820' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 1, 3500, N'', CAST(N'2023-06-09T18:57:42.163' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 1, 3500, N'', CAST(N'2023-06-09T19:06:32.890' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (19, 1, 3500, N'', CAST(N'2023-06-10T09:58:28.953' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 1, 2000, N'', CAST(N'2023-06-10T10:57:23.683' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (32, 0, 5200, N'', CAST(N'2023-06-10T11:38:40.247' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (32, 1, 5200, N'', CAST(N'2023-06-10T11:50:35.610' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (29, 2, 3500, N'', CAST(N'2023-06-10T12:07:54.257' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 3, 3500, N'', CAST(N'2023-06-10T12:44:08.273' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (29, 2, 3500, N'', CAST(N'2023-06-10T13:19:31.403' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (26, 1, 3500, N'', CAST(N'2023-06-10T13:21:54.083' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (21, 1, 4500, N'', CAST(N'2023-06-11T08:05:23.030' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 2, 2000, N'', CAST(N'2023-06-11T13:45:07.037' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (20, 1, 2000, N'', CAST(N'2023-06-11T14:18:22.480' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (24, 1, 2000, N'', CAST(N'2023-06-11T14:52:27.000' AS DateTime), 1);
-INSERT Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo) VALUES (19, 1, 3500, N'', CAST(N'2023-06-11T16:54:01.667' AS DateTime), 1);
+INSERT INTO Entradas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo)
+VALUES 
+    (1, 20, 1000, 'Prueba', CAST(N'2022-06-29T08:34:39.457' AS DateTime), 1),
+    (2, 10, 1000, '', CAST(N'2022-06-29T11:14:34.820' AS DateTime), 1),
+    (1, 40, 2000, N'', CAST(N'2023-06-01T16:23:26.433' AS DateTime), 1),
+    (30, 22, 3500, N'', CAST(N'2023-06-09T07:11:17.230' AS DateTime), 1),
+    (24, 21, 2000, N'', CAST(N'2023-06-09T13:06:46.937' AS DateTime), 1),
+    (18, 1, 22000, N'', CAST(N'2023-06-09T14:06:14.373' AS DateTime), 1),
+    (25, 15, 2000, N'', CAST(N'2023-06-09T14:09:03.520' AS DateTime), 1),
+    (12, 1, 22000, N'', CAST(N'2023-06-09T14:09:48.683' AS DateTime), 1),
+    (17, 1, 22000, N'', CAST(N'2023-06-09T14:10:52.350' AS DateTime), 1),
+    (8, 1, 15000, N'', CAST(N'2023-06-09T14:11:14.257' AS DateTime), 1),
+    (9, 3, 3000, N'', CAST(N'2023-06-09T14:11:45.827' AS DateTime), 1),
+    (10, 2, 35000, N'', CAST(N'2023-06-09T14:12:02.323' AS DateTime), 1),
+    (11, 1, 20000, N'', CAST(N'2023-06-09T14:12:28.613' AS DateTime), 1),
+    (13, 5, 5500, N'', CAST(N'2023-06-09T14:12:53.370' AS DateTime), 1),
+    (14, 47, 1500, N'', CAST(N'2023-06-09T14:13:15.080' AS DateTime), 1),
+    (19, 14, 3500, N'', CAST(N'2023-06-09T14:13:37.107' AS DateTime), 1),
+    (20, 30, 2000, N'', CAST(N'2023-06-09T14:16:46.030' AS DateTime), 1),
+    (21, 16, 4500, N'', CAST(N'2023-06-09T14:17:44.617' AS DateTime), 1),
+    (22, 17, 2000, N'', CAST(N'2023-06-09T14:18:16.097' AS DateTime), 1),
+    (23, 22, 2500, N'', CAST(N'2023-06-09T14:18:48.690' AS DateTime), 1),
+    (26, 50, 3500, N'', CAST(N'2023-06-09T14:19:11.110' AS DateTime), 1),
+    (27, 21, 3500, N'', CAST(N'2023-06-09T14:19:34.467' AS DateTime), 1),
+    (29, 26, 3500, N'', CAST(N'2023-06-09T14:20:32.750' AS DateTime), 1),
+    (16, 1, 20000, N'', CAST(N'2023-06-09T14:26:54.520' AS DateTime), 1),
+    (15, 1, 22000, N'', CAST(N'2023-06-09T14:37:27.287' AS DateTime), 1),
+    (28, 24, 3500, N'', CAST(N'2023-06-09T15:59:25.873' AS DateTime), 1),
+    (31, 10, 5000, N'', CAST(N'2023-06-09T18:26:00.360' AS DateTime), 1),
+    (32, 100, 5200, N'', CAST(N'2023-06-10T11:50:05.927' AS DateTime), 1),
+    (24, 1, 2000, N'', CAST(N'2023-06-10T11:57:07.070' AS DateTime), 1),
+    (20, 24, 2000, N'', CAST(N'2023-06-11T07:09:28.607' AS DateTime), 1),
+    (26, 4, 3500, N'', CAST(N'2023-06-11T15:51:47.230' AS DateTime), 1),
+    (24, 1, 2000, N'', CAST(N'2023-06-11T15:54:29.650' AS DateTime), 1),
+    (25, 28, 2000, N'', CAST(N'2023-06-16T06:42:15.067' AS DateTime), 1),
+    (19, 42, 3500, N'', CAST(N'2023-06-22T09:31:21.033' AS DateTime), 1),
+    (22, 15, 2000, N'', CAST(N'2023-06-22T09:31:38.340' AS DateTime), 1),
+    (13, 5, 5500, N'', CAST(N'2023-06-23T09:55:51.867' AS DateTime), 1),
+    (23, 4, 2500, N'', CAST(N'2023-06-26T09:16:08.580' AS DateTime), 1),
+    (21, 16, 4500, N'', CAST(N'2023-06-26T09:16:30.637' AS DateTime), 1),
+    (24, 24, 2000, N'', CAST(N'2023-06-26T09:16:50.063' AS DateTime), 1);
 
 
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-01T07:01:53.317' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 7, 19000, N'', CAST(N'2023-06-01T07:22:45.863' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (9, 6, 4000, N'', CAST(N'2023-06-01T07:22:59.093' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 6, 13000, N'', CAST(N'2023-06-01T07:54:49.827' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 7, 14000, N'', CAST(N'2023-06-02T08:00:09.257' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-02T08:13:18.577' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 4, 13000, N'', CAST(N'2023-06-02T08:13:51.503' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-02T08:14:17.210' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-02T08:31:18.850' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 7, 19000, N'', CAST(N'2023-06-03T08:59:55.950' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 4, 14000, N'', CAST(N'2023-06-03T12:16:24.357' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 4, 19000, N'', CAST(N'2023-06-03T12:16:51.807' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 4, 14000, N'', CAST(N'2023-06-03T12:17:44.517' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-04T12:19:01.520' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-04T12:19:12.260' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-04T12:19:43.503' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-04T12:19:56.337' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-04T12:20:18.430' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-04T12:21:17.280' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 8, 19000, N'', CAST(N'2023-06-04T12:22:12.330' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 8, 19000, N'', CAST(N'2023-06-04T12:22:25.873' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-04T12:22:45.110' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 6, 13000, N'', CAST(N'2023-06-05T12:27:23.847' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 7, 13000, N'', CAST(N'2023-06-05T12:29:22.257' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 7, 13000, N'', CAST(N'2023-06-05T12:29:41.750' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 7, 14000, N'', CAST(N'2023-06-05T12:30:06.037' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 6, 14000, N'', CAST(N'2023-06-05T12:30:33.853' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-05T12:36:24.517' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 7, 16000, N'', CAST(N'2023-06-05T12:49:31.950' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 5, 19000, N'', CAST(N'2023-06-05T12:59:24.070' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-06T13:00:32.167' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 4, 16000, N'', CAST(N'2023-06-06T13:25:18.303' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-06T13:31:30.200' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 7, 13000, N'', CAST(N'2023-06-06T13:34:42.357' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 5, 14000, N'', CAST(N'2023-06-06T13:46:00.343' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-06T14:01:34.650' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-06T14:15:58.143' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 6, 13000, N'', CAST(N'2023-06-06T14:24:07.410' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (13, 7, 15000, N'', CAST(N'2023-06-07T14:25:18.450' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 4, 19000, N'', CAST(N'2023-06-07T14:35:34.380' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 4, 16000, N'', CAST(N'2023-06-08T14:35:44.190' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (9, 7, 5000, N'', CAST(N'2023-06-08T14:41:44.577' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (10, 3, 45000, N'tinte y peinado de la niña ', CAST(N'2023-06-09T15:08:37.523' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-09T15:10:02.840' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 4, 13000, N'', CAST(N'2023-06-09T15:16:29.843' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-09T15:20:44.730' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 5, 16000, N'', CAST(N'2023-06-09T15:30:32.780' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (6, 6, 8000, N'', CAST(N'2023-06-09T15:30:48.427' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 8, 16000, N'', CAST(N'2023-06-09T15:34:06.363' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 7, 14000, N'', CAST(N'2023-06-09T15:41:55.003' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-09T15:47:28.387' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-09T15:48:03.763' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 4, 14000, N'', CAST(N'2023-06-09T15:52:14.050' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-09T15:55:58.650' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 6, 14000, N'', CAST(N'2023-06-09T16:12:30.467' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 8, 16000, N'', CAST(N'2023-06-09T16:12:49.973' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 4, 14000, N'', CAST(N'2023-06-09T16:14:52.680' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 5, 14000, N'', CAST(N'2023-06-09T16:15:03.057' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 7, 16000, N'', CAST(N'2023-06-09T16:17:43.540' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-09T16:18:18.980' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-09T16:35:49.713' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 7, 13000, N'', CAST(N'2023-06-10T16:47:19.560' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 4, 13000, N'', CAST(N'2023-06-10T16:52:04.993' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 3, 13000, N'', CAST(N'2023-06-10T16:54:28.480' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-10T16:57:40.313' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 8, 14000, N'', CAST(N'2023-06-11T17:01:33.667' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 6, 19000, N'', CAST(N'2023-06-11T17:08:24.337' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-11T17:15:21.273' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (4, 6, 16000, N'', CAST(N'2023-06-11T17:39:00.303' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 4, 10000, N'', CAST(N'2023-06-11T17:39:30.603' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 7, 19000, N'', CAST(N'2023-06-12T18:35:40.323' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 7, 19000, N'', CAST(N'2023-06-12T18:35:52.957' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (6, 4, 8000, N'', CAST(N'2023-06-15T07:12:00.770' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 6, 13000, N'', CAST(N'2023-06-17T07:46:55.283' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 7, 13000, N'', CAST(N'2023-06-17T07:52:53.977' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 4, 13000, N'', CAST(N'2023-06-17T08:31:43.857' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 6, 14000, N'', CAST(N'2023-06-18T08:36:00.663' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 8, 14000, N'', CAST(N'2023-06-18T08:55:06.213' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (10, 5, 12000, N'', CAST(N'2023-06-18T09:28:59.350' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-20T10:03:46.717' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 5, 13000, N'', CAST(N'2023-06-20T10:12:08.877' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (11, 4, 25000, N'', CAST(N'2023-06-20T10:22:39.267' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-20T10:31:05.127' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 7, 19000, N'', CAST(N'2023-06-21T10:41:07.970' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 4, 14000, N'', CAST(N'2023-06-21T10:56:02.970' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 6, 19000, N'', CAST(N'2023-06-22T10:58:16.200' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (2, 7, 14000, N'', CAST(N'2023-06-23T11:28:53.817' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (3, 5, 19000, N'', CAST(N'2023-06-23T11:36:04.257' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (11, 7, 20000, N'', CAST(N'2023-06-24T12:09:02.497' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-24T12:20:24.910' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 6, 13000, N'', CAST(N'2023-06-25T12:43:29.363' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 8, 13000, N'', CAST(N'2023-06-26T13:20:35.813' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (10, 8, 7000, N'', CAST(N'2023-06-27T13:21:04.360' AS DateTime));
-INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) VALUES (1, 6, 13000, N'', CAST(N'2023-06-28T06:47:33.170' AS DateTime));
+
+INSERT INTO Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo)
+VALUES
+    (13, 1, 5500, N'', CAST(N'2023-06-09T07:12:22.417' AS DateTime), 1),
+    (24, 2, 2000, N'', CAST(N'2023-06-09T13:07:33.797' AS DateTime), 1),
+    (21, 1, 4500, N'', CAST(N'2023-06-09T14:46:05.523' AS DateTime), 1),
+    (14, 1, 1500, N'', CAST(N'2023-06-09T14:47:02.933' AS DateTime), 1),
+    (20, 1, 2000, N'', CAST(N'2023-06-09T14:52:12.557' AS DateTime), 1),
+    (25, 2, 2000, N'', CAST(N'2023-06-09T14:52:34.593' AS DateTime), 1),
+    (26, 4, 3500, N'', CAST(N'2023-06-09T14:58:48.190' AS DateTime), 1),
+    (21, 1, 4500, N'', CAST(N'2023-06-09T14:59:15.793' AS DateTime), 1),
+    (20, 1, 2000, N'', CAST(N'2023-06-09T14:59:49.043' AS DateTime), 1),
+    (26, 2, 3500, N'', CAST(N'2023-06-09T15:00:26.360' AS DateTime), 1),
+    (29, 2, 3500, N'', CAST(N'2023-06-09T15:00:46.613' AS DateTime), 1),
+    (20, 2, 2000, N'', CAST(N'2023-06-09T15:01:06.690' AS DateTime), 1),
+    (23, 1, 2500, N'', CAST(N'2023-06-09T15:03:16.313' AS DateTime), 1),
+    (23, 1, 2500, N'', CAST(N'2023-06-09T15:42:32.060' AS DateTime), 1),
+    (25, 1, 2000, N'', CAST(N'2023-06-09T16:15:54.017' AS DateTime), 1),
+    (12, 1, 22000, N'', CAST(N'2023-06-09T17:17:28.717' AS DateTime), 1),
+    (26, 1, 3500, N'', CAST(N'2023-06-09T17:18:24.430' AS DateTime), 1),
+    (26, 1, 3500, N'', CAST(N'2023-06-09T17:18:46.053' AS DateTime), 1),
+    (30, 2, 3500, N'', CAST(N'2023-06-09T17:19:00.490' AS DateTime), 1),
+    (31, 1, 10000, N'', CAST(N'2023-06-09T18:26:17.327' AS DateTime), 1),
+    (20, 2, 2000, N'', CAST(N'2023-06-09T18:48:15.820' AS DateTime), 1),
+    (26, 1, 3500, N'', CAST(N'2023-06-09T18:57:42.163' AS DateTime), 1),
+    (26, 1, 3500, N'', CAST(N'2023-06-09T19:06:32.890' AS DateTime), 1),
+    (19, 1, 3500, N'', CAST(N'2023-06-10T09:58:28.953' AS DateTime), 1),
+    (20, 1, 2000, N'', CAST(N'2023-06-10T10:57:23.683' AS DateTime), 1),
+    (32, 0, 5200, N'', CAST(N'2023-06-10T11:38:40.247' AS DateTime), 1),
+    (32, 1, 5200, N'', CAST(N'2023-06-10T11:50:35.610' AS DateTime), 1),
+    (29, 2, 3500, N'', CAST(N'2023-06-10T12:07:54.257' AS DateTime), 1),
+    (26, 3, 3500, N'', CAST(N'2023-06-10T12:44:08.273' AS DateTime), 1),
+    (29, 2, 3500, N'', CAST(N'2023-06-10T13:19:31.403' AS DateTime), 1),
+    (26, 1, 3500, N'', CAST(N'2023-06-10T13:21:54.083' AS DateTime), 1),
+    (21, 1, 4500, N'', CAST(N'2023-06-11T08:05:23.030' AS DateTime), 1),
+    (24, 2, 2000, N'', CAST(N'2023-06-11T13:45:07.037' AS DateTime), 1),
+    (20, 1, 2000, N'', CAST(N'2023-06-11T14:18:22.480' AS DateTime), 1),
+    (24, 1, 2000, N'', CAST(N'2023-06-11T14:52:27.000' AS DateTime), 1),
+    (19, 1, 3500, N'', CAST(N'2023-06-11T16:54:01.667' AS DateTime), 1);
 
 
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (7, 1, 1, CAST(N'2022-07-15T09:10:00.387' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (8, 2, 2, CAST(N'2022-07-15T09:10:25.300' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (7, 2, 1, CAST(N'2022-07-15T13:29:00.093' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (3, 4, 1, CAST(N'2022-07-16T15:22:04.807' AS DateTime), 0);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (3, 5, 1, CAST(N'2022-07-16T15:37:40.520' AS DateTime), 0);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (6, 6, 1, CAST(N'2022-07-20T06:30:41.163' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (7, 6, 1, CAST(N'2022-07-21T14:58:57.160' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (4, 7, 1, CAST(N'2022-08-05T06:54:58.770' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 8, 1, CAST(N'2022-08-09T15:04:15.717' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 8, 1, CAST(N'2022-08-18T11:13:46.873' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 9, 1, CAST(N'2022-08-29T16:32:24.767' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (6, 5, 1, CAST(N'2022-09-10T10:50:30.537' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (4, 3, 1, CAST(N'2022-09-19T06:57:21.203' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 2, 1, CAST(N'2022-09-24T14:26:10.317' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (8, 4, 1, CAST(N'2022-09-28T08:07:23.140' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 3, 1, CAST(N'2022-09-30T11:49:27.043' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (6, 10,1, CAST(N'2022-10-01T05:28:03.717' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 11, 2, CAST(N'2022-10-08T10:38:27.180' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (4, 12, 1, CAST(N'2022-10-19T15:07:55.283' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 13, 1, CAST(N'2022-11-16T15:22:13.870' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (10, 10, 1, CAST(N'2022-11-25T08:34:21.433' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 9, 1, CAST(N'2022-12-19T09:44:17.840' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (12, 14, 1, CAST(N'2023-02-09T07:40:59.527' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (12, 13, 1, CAST(N'2023-02-11T05:39:15.227' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 14, 1, CAST(N'2023-02-11T09:44:17.017' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (12, 12, 1, CAST(N'2023-03-08T11:56:56.767' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (10, 11, 1, CAST(N'2023-03-25T11:07:16.900' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (12, 10, 1, CAST(N'2023-04-29T11:15:55.063' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (9, 8, 1, CAST(N'2023-05-18T10:32:20.373' AS DateTime), 1);
-INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES (12, 7, 1, CAST(N'2023-06-27T11:56:53.083' AS DateTime), 1);
+
+INSERT Trabajos (Servicio_Id, Usuario_Id, Valor, Observaciones, FechaRegistro) 
+VALUES 
+    (1, 8, 13000, N'', CAST(N'2023-06-01T07:01:53.317' AS DateTime)),
+    (3, 7, 19000, N'', CAST(N'2023-06-01T07:22:45.863' AS DateTime)),
+    (9, 6, 4000, N'', CAST(N'2023-06-01T07:22:59.093' AS DateTime)),
+    (1, 6, 13000, N'', CAST(N'2023-06-01T07:54:49.827' AS DateTime)),
+    (2, 7, 14000, N'', CAST(N'2023-06-02T08:00:09.257' AS DateTime)),
+    (1, 3, 13000, N'', CAST(N'2023-06-02T08:13:18.577' AS DateTime)),
+    (1, 4, 13000, N'', CAST(N'2023-06-02T08:13:51.503' AS DateTime)),
+    (1, 5, 13000, N'', CAST(N'2023-06-02T08:14:17.210' AS DateTime)),
+    (1, 8, 13000, N'', CAST(N'2023-06-02T08:31:18.850' AS DateTime)),
+    (3, 7, 19000, N'', CAST(N'2023-06-03T08:59:55.950' AS DateTime)),
+    (2, 4, 14000, N'', CAST(N'2023-06-03T12:16:24.357' AS DateTime)),
+    (3, 4, 19000, N'', CAST(N'2023-06-03T12:16:51.807' AS DateTime)),
+    (2, 4, 14000, N'', CAST(N'2023-06-03T12:17:44.517' AS DateTime)),
+    (1, 5, 13000, N'', CAST(N'2023-06-04T12:19:01.520' AS DateTime)),
+    (1, 5, 13000, N'', CAST(N'2023-06-04T12:19:12.260' AS DateTime)),
+    (1, 3, 13000, N'', CAST(N'2023-06-04T12:19:43.503' AS DateTime)),
+    (1, 3, 13000, N'', CAST(N'2023-06-04T12:19:56.337' AS DateTime)),
+    (1, 3, 13000, N'', CAST(N'2023-06-04T12:20:18.430' AS DateTime)),
+    (1, 8, 13000, N'', CAST(N'2023-06-04T12:21:17.280' AS DateTime)),
+    (3, 8, 19000, N'', CAST(N'2023-06-04T12:22:12.330' AS DateTime)),
+    (3, 8, 19000, N'', CAST(N'2023-06-04T12:22:25.873' AS DateTime)),
+    (1, 8, 13000, N'', CAST(N'2023-06-04T12:22:45.110' AS DateTime)),
+    (1, 6, 13000, N'', CAST(N'2023-06-05T12:27:23.847' AS DateTime)),
+    (1, 7, 13000, N'', CAST(N'2023-06-05T12:29:22.257' AS DateTime)),
+    (1, 7, 13000, N'', CAST(N'2023-06-05T12:29:41.750' AS DateTime)),
+    (2, 7, 14000, N'', CAST(N'2023-06-05T12:30:06.037' AS DateTime)),
+    (2, 6, 14000, N'', CAST(N'2023-06-05T12:30:33.853' AS DateTime)),
+    (1, 3, 13000, N'', CAST(N'2023-06-05T12:36:24.517' AS DateTime)),
+    (4, 7, 16000, N'', CAST(N'2023-06-05T12:49:31.950' AS DateTime)),
+    (3, 5, 19000, N'', CAST(N'2023-06-05T12:59:24.070' AS DateTime)),
+    (1, 8, 13000, N'', CAST(N'2023-06-06T13:00:32.167' AS DateTime)),
+    (4, 4, 16000, N'', CAST(N'2023-06-06T13:25:18.303' AS DateTime)),
+    (1, 8, 13000, N'', CAST(N'2023-06-06T13:31:30.200' AS DateTime)),
+    (1, 7, 13000, N'', CAST(N'2023-06-06T13:34:42.357' AS DateTime)),
+    (2, 5, 14000, N'', CAST(N'2023-06-06T13:46:00.343' AS DateTime)),
+    (1, 8, 13000, N'', CAST(N'2023-06-06T14:01:34.650' AS DateTime)),
+    (1, 5, 13000, N'', CAST(N'2023-06-06T14:15:58.143' AS DateTime)),
+    (1, 6, 13000, N'', CAST(N'2023-06-06T14:24:07.410' AS DateTime)),
+    (13, 7, 15000, N'', CAST(N'2023-06-07T14:25:18.450' AS DateTime)),
+    (3, 4, 19000, N'', CAST(N'2023-06-07T14:35:34.380' AS DateTime)),
+    (4, 4, 16000, N'', CAST(N'2023-06-08T14:35:44.190' AS DateTime)),
+    (9, 7, 5000, N'', CAST(N'2023-06-08T14:41:44.577' AS DateTime));
+
+
+INSERT UsuarioProductos(Usuario_Id, Producto_Id, Cantidad, FechaRegistro, Activo) VALUES
+(7, 1, 1, CAST(N'2022-07-15T09:10:00.387' AS DateTime), 1),
+(8, 2, 2, CAST(N'2022-07-15T09:10:25.300' AS DateTime), 1),
+(7, 2, 1, CAST(N'2022-07-15T13:29:00.093' AS DateTime), 1),
+(3, 4, 1, CAST(N'2022-07-16T15:22:04.807' AS DateTime), 0),
+(3, 5, 1, CAST(N'2022-07-16T15:37:40.520' AS DateTime), 0),
+(6, 6, 1, CAST(N'2022-07-20T06:30:41.163' AS DateTime), 1),
+(7, 6, 1, CAST(N'2022-07-21T14:58:57.160' AS DateTime), 1),
+(4, 7, 1, CAST(N'2022-08-05T06:54:58.770' AS DateTime), 1),
+(9, 8, 1, CAST(N'2022-08-09T15:04:15.717' AS DateTime), 1),
+(9, 8, 1, CAST(N'2022-08-18T11:13:46.873' AS DateTime), 1),
+(9, 9, 1, CAST(N'2022-08-29T16:32:24.767' AS DateTime), 1),
+(6, 5, 1, CAST(N'2022-09-10T10:50:30.537' AS DateTime), 1),
+(4, 3, 1, CAST(N'2022-09-19T06:57:21.203' AS DateTime), 1),
+(9, 2, 1, CAST(N'2022-09-24T14:26:10.317' AS DateTime), 1),
+(8, 4, 1, CAST(N'2022-09-28T08:07:23.140' AS DateTime), 1),
+(9, 3, 1, CAST(N'2022-09-30T11:49:27.043' AS DateTime), 1),
+(6, 10, 1, CAST(N'2022-10-01T05:28:03.717' AS DateTime), 1),
+(9, 11, 2, CAST(N'2022-10-08T10:38:27.180' AS DateTime), 1),
+(4, 12, 1, CAST(N'2022-10-19T15:07:55.283' AS DateTime), 1),
+(9, 13, 1, CAST(N'2022-11-16T15:22:13.870' AS DateTime), 1),
+(10, 10, 1, CAST(N'2022-11-25T08:34:21.433' AS DateTime), 1),
+(9, 9, 1, CAST(N'2022-12-19T09:44:17.840' AS DateTime), 1),
+(12, 14, 1, CAST(N'2023-02-09T07:40:59.527' AS DateTime), 1),
+(12, 13, 1, CAST(N'2023-02-11T05:39:15.227' AS DateTime), 1),
+(9, 14, 1, CAST(N'2023-02-11T09:44:17.017' AS DateTime), 1),
+(12, 12, 1, CAST(N'2023-03-08T11:56:56.767' AS DateTime), 1),
+(10, 11, 1, CAST(N'2023-03-25T11:07:16.900' AS DateTime), 1),
+(12, 10, 1, CAST(N'2023-04-29T11:15:55.063' AS DateTime), 1),
+(9, 8, 1, CAST(N'2023-05-18T10:32:20.373' AS DateTime), 1),
+(12, 7, 1, CAST(N'2023-06-27T11:56:53.083' AS DateTime), 1);
