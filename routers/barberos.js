@@ -25,6 +25,47 @@ appBarberos.get('/',(req, res) => {
         }
     );
 });
+
+appBarberos.put('/:id', middlewareBarberos, (req, res) => {
+    const usuarioId = req.params.id;
+    const info = req.body;
+    con.query(
+      /*sql*/ `
+      UPDATE Usuarios
+      SET Nombre = ?, Documento = ?, Correo = ?, Clave = ?, Activo = ?
+      WHERE Usuario_Id = ?`,
+      [info.Nombre, info.Documento, info.Correo, info.Clave, info.Activo, usuarioId],
+      (err, data) => {
+        if (err) {
+          res.status(500).send(err);
+        } else {
+          if (data.affectedRows === 0) {
+            res.status(404).send("Usuario no encontrado.");
+          } else {
+            con.query(
+              /*sql*/ `
+              UPDATE UsuarioRoles
+              SET Rol_Id = ?
+              WHERE Usuario_Id = ?`,
+              [info.Rol_Id, usuarioId],
+              (err, data) => {
+                if (err) {
+                  res.status(500).send(err);
+                } else {
+                  if (data.affectedRows === 0) {
+                    res.status(404).send("Usuario o rol no encontrado.");
+                  } else {
+                    res.status(200).send("Actualización exitosa.");
+                  }
+                }
+              }
+            );
+          }
+        }
+      }
+    );
+  });
+
 appBarberos.post('/', middlewareBarberos, (req, res) => {
     let info = req.body;
     con.query(
@@ -53,4 +94,43 @@ appBarberos.post('/', middlewareBarberos, (req, res) => {
         }
     );
 });
+
+appBarberos.delete('/:id', (req, res) => {
+    const usuarioId = req.params.id;
+    con.query(
+      /*sql*/ `
+      DELETE FROM UsuarioRoles
+      WHERE Usuario_Id = ?`,
+      [usuarioId],
+      (err, data) => {
+        if (err) {
+          res.status(500).send(err);
+        } else {
+          if (data.affectedRows === 0) {
+            res.status(404).send("Usuario no encontrado.");
+          } else {
+            con.query(
+              /*sql*/ `
+              DELETE FROM Usuarios
+              WHERE Usuario_Id = ?`,
+              [usuarioId],
+              (err, data) => {
+                if (err) {
+                  res.status(500).send(err);
+                } else {
+                  if (data.affectedRows === 0) {
+                    res.status(404).send("Usuario no encontrado.");
+                  } else {
+                    res.status(200).send("Eliminación exitosa.");
+                  }
+                }
+              }
+            );
+          }
+        }
+      }
+    );
+  });
+  
+
 export default appBarberos;
