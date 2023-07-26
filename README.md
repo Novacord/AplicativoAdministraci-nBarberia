@@ -142,14 +142,14 @@ Este proyecto implementa un endpoint que permite registrar nuevos usuarios en la
 El cuerpo de la solicitud para registrar un nuevo usuario debe tener el siguiente formato en JSON:
 
 ```json
-json
+
 {
   "nombre-usuario": "Nombre del usuario",
   "documento-usuario": "Número de documento",
   "correo-usuario": "Correo electrónico del usuario",
   "clave-usuario": "Contraseña del usuario",
   "activo-usuario": 1, // 1 para activo 0 para no activo
-  "rol-usuario": 1 // 1 para Administrador, 2 para Barber"
+  "rol-usuario": 1 // 1 Administrador, 2 Secretaria, 3 Barbero"
 }
 ```
 
