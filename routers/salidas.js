@@ -21,11 +21,11 @@ appSalidas.use((req, res, next) => {
 appSalidas.get('/', validateToken,(req, res) => {
     con.query(
       /*sql*/ `
-      SELECT * FROM salidas
+      SELECT * FROM Salidas
       `,
       (err, data) => {
         if (err) {
-          res.status(500).send("Error al obtener las entradas.");
+          res.status(500).send(err);
         } else {
           res.send(data);
         }
@@ -39,7 +39,7 @@ appSalidas.post('/',middlewareSalidas,validateToken,(req, res) => {
   
     con.query(
       /*sql*/ `
-      INSERT INTO salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo)
+      INSERT INTO Salidas (Producto_Id, Cantidad, ValorUnitario, Observaciones, FechaRegistro, Activo)
       VALUES (?, ?, ?, ?, ?, ?)
       `,
       [Producto_Id, Cantidad, ValorUnitario, Observaciones, fechaRegistro, Activo],
@@ -59,7 +59,7 @@ appSalidas.post('/',middlewareSalidas,validateToken,(req, res) => {
   
     con.query(
       /*sql*/ `
-      UPDATE salidas
+      UPDATE Salidas
       SET Producto_Id=?, Cantidad=?, ValorUnitario=?, Observaciones=?, Activo=?
       WHERE Salida_Id=?
       `,
@@ -79,7 +79,7 @@ appSalidas.post('/',middlewareSalidas,validateToken,(req, res) => {
   
     con.query(
       /*sql*/ `
-      DELETE FROM salidas
+      DELETE FROM Salidas
       WHERE Salida_Id=?
       `,
       [entradaId],
