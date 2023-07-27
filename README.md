@@ -140,7 +140,7 @@ Este proyecto implementa un endpoint que permite registrar nuevos usuarios en la
 - Permite el registro de nuevos usuarios en la aplicación.
 - Los datos del usuario a registrar deben enviarse en el cuerpo de la solicitud en formato JSON.
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud para registrar un nuevo usuario debe tener el siguiente formato en JSON:
 
@@ -261,7 +261,7 @@ El endpoint permite registrar los trabajos realizados en una barbería. Cada tra
 - Método: POST,DELETE
 - Ruta del Endpoint: `/ganancias`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST 
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
@@ -317,7 +317,7 @@ El endpoint permite registrar los Servicios realizados en una barbería.
 - Método: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/servicios`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
@@ -374,7 +374,7 @@ El endpoint permite registrar las entradas realizados en el inventario de una ba
 - Método: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/entradas-inventario`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
@@ -431,7 +431,7 @@ El endpoint permite registrar las Salidas realizados en el inventario de una bar
 - Método: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/salidas-inventario`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
@@ -488,7 +488,7 @@ El endpoint permite registrar los Prestamos realizados en el inventario de una b
 - Método: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/prestamo-usuario`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
@@ -570,7 +570,7 @@ El endpoint permite registrar los productos realizados en el inventario de una b
 - Método: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/productos`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
@@ -604,7 +604,7 @@ El endpoint permite registrar los Pagos de Productos de un Usuarios realizados e
 - Método: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/PagoProductoUsuarios`
 
-## Estructura del Cuerpo de la Solicitud
+## Estructura del Cuerpo de la Solicitud POST y PUT
 
 El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
