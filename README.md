@@ -18,6 +18,8 @@ Este es un aplicativo diseñado para administrar el control de entradas y salida
    - Registro de barberos con información personal y datos de contacto.
    - Registro de servicios prestados por cada barbero, incluyendo el nombre del servicio y su precio.
    - Cálculo automático de las ganancias diarias, mensuales y anuales para cada barbero, teniendo en cuenta los servicios prestados.
+   
+3. registra Usuarios,productos,entradas y salidas de un inventario, los prestamos de procutos a un usuarios y lo trabajos realizados de un usuario.
 
 ## Tablas de la base de datos
 ![](./img%20db/CapturaDef.PNG)
@@ -343,3 +345,269 @@ http://HostName:port/servicios/1
 ```
 
 donde le 1 es el id, :id.
+
+
+
+# Entradas Productos
+
+El endpoint permite registrar las entradas realizados en el inventario de una barberia.
+
+## Características del Endpoint
+
+- Método: POST,GET,PUT,DELETE
+- Ruta del Endpoint: `/entradas-inventario`
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
+
+```json
+{
+  "Producto_Id": 123,        // El ID del producto asociado a la entrada (reemplaza 123 con un valor válido).
+  "Cantidad": 5,             // La cantidad de productos en la entrada (reemplaza 5 con un valor válido).
+  "ValorUnitario": 1000,     // El valor unitario del producto (reemplaza 1000 con un valor válido).
+  "Observaciones": "Nueva entrada de prueba.",   // Observaciones sobre la entrada (opcional).
+  "Activo": 1             // Indica si la entrada está activa o no (1 o 0).
+}
+```
+
+## Respuestas del Endpoint
+
+El endpoint proporcionará las siguientes respuestas:
+
+- **Éxito (Código de Estado 200)**: Si el registro es exitoso, el servidor responderá con un mensaje indicando que la Entrada ha sido registrado correctamente.
+
+```
+registro exitoso
+```
+
+- **Error de Solicitud (Código de Estado 406)**: es que unos de los parámetros no cumple con el formato requerido y mostrara o el numero de caracteres no cumple, ejemplo:
+
+```
+El "nombre del parametro" no cumple con el formato
+```
+
+- **Error de Solicitud (Código de Estado 422)**: es que unos de los parámetros no esta y es obligatorio ponerlo un ejemplo:
+
+```
+El parametro "nombre del parametro" es obligatorio
+```
+
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/entradas-inventario/1
+```
+
+donde le 1 es el id, :id.
+
+
+
+# Salidas Productos
+
+El endpoint permite registrar las Salidas realizados en el inventario de una barberia.
+
+## Características del Endpoint
+
+- Método: POST,GET,PUT,DELETE
+- Ruta del Endpoint: `/salidas-inventario`
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
+
+```json
+{
+  "Producto_Id": 123,        // El ID del producto asociado a la salida (reemplaza 123 con un valor válido).
+  "Cantidad": 5,             // La cantidad de productos en la salida (reemplaza 5 con un valor válido).
+  "ValorUnitario": 1000,     // El valor unitario del producto (reemplaza 1000 con un valor válido).
+  "Observaciones": "Nueva entrada de prueba.",   // Observaciones sobre la salida (opcional).
+  "Activo": 1             // Indica si la salida está activa o no (1 o 0).
+}
+```
+
+## Respuestas del Endpoint
+
+El endpoint proporcionará las siguientes respuestas:
+
+- **Éxito (Código de Estado 200)**: Si el registro es exitoso, el servidor responderá con un mensaje indicando que la salida ha sido registrado correctamente.
+
+```
+registro exitoso
+```
+
+- **Error de Solicitud (Código de Estado 406)**: es que unos de los parámetros no cumple con el formato requerido y mostrara o el numero de caracteres no cumple, ejemplo:
+
+```
+El "nombre del parametro" no cumple con el formato
+```
+
+- **Error de Solicitud (Código de Estado 422)**: es que unos de los parámetros no esta y es obligatorio ponerlo un ejemplo:
+
+```
+El parametro "nombre del parametro" es obligatorio
+```
+
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/salidas-inventario/1
+```
+
+donde le 1 es el id, :id.
+
+
+
+# Prestamos Productos
+
+El endpoint permite registrar los Prestamos realizados en el inventario de una barberia.
+
+## Características del Endpoint
+
+- Método: POST,GET,PUT,DELETE
+- Ruta del Endpoint: `/prestamo-usuario`
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
+
+```json
+{
+  "Usuario_Id": 456,        // El ID del usuario asociado a la relación (reemplaza 456 con un valor válido).
+  "Producto_Id": 789,       // El ID del producto asociado a la relación (reemplaza 789 con un valor válido).
+  "Cantidad": 3,            // La cantidad de productos en la relación (reemplaza 3 con un valor válido).
+  "Activo": 1           // Indica si la relación está activa o no (1 o 0).
+}
+```
+
+## Respuestas del Endpoint
+
+El endpoint proporcionará las siguientes respuestas:
+
+- **Éxito (Código de Estado 200)**: Si el registro es exitoso, el servidor responderá con un mensaje indicando que el Prestamo ha sido registrado correctamente.
+
+```
+registro exitoso
+```
+
+- **Error de Solicitud (Código de Estado 406)**: es que unos de los parámetros no cumple con el formato requerido y mostrara o el numero de caracteres no cumple, ejemplo:
+
+```
+El "nombre del parametro" no cumple con el formato
+```
+
+- **Error de Solicitud (Código de Estado 422)**: es que unos de los parámetros no esta y es obligatorio ponerlo un ejemplo:
+
+```
+El parametro "nombre del parametro" es obligatorio
+```
+
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/prestamo-usuario/1
+```
+
+donde le 1 es el id, :id.
+
+
+
+# Lista del inventario
+
+El endpoint permite listar el inventario donde muestra las entradas del producto, las salidas del producto, si algún usuario como un barbero saco un producto y cuantos quedan en el inventario.
+
+## Características del Endpoint
+
+- Método: GET
+- Ruta del Endpoint: `/inventario`
+- permite listar el inventario
+
+## Respuestas del Endpoint
+
+El endpoint proporcionará las siguientes respuestas:
+
+```json
+  {
+    "Producto": "BODY SPLASH",//nombre del producto
+    "Entradas": "60",//cuantos entraron
+    "Salidas": "0",//cuantos salieron
+    "Usuario": "1",//cuantos salieron por un usuario
+    "Inventario": "59"//y cuantos quedan en total en el inventario
+  }
+```
+
+
+
+# Registro de productos
+
+El endpoint permite registrar los productos realizados en el inventario de una barberia.
+
+## Características del Endpoint
+
+- Método: POST,GET,PUT,DELETE
+- Ruta del Endpoint: `/productos`
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
+
+```json
+{
+  "Nombre": "Producto de prueba",   // El nombre del producto (reemplaza "Producto de prueba" con el nombre deseado).
+  "ValorVenta": 1000,               // El valor de venta del producto (reemplaza 1000 con el valor deseado).
+  "InventarioBase": 50,             // El inventario base del producto (reemplaza 50 con el valor deseado).
+  "Activo": 1                   // Indica si el producto está activo o no (1 o 0).
+}
+```
+
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/productos/1
+```
+
+donde le 1 es el id, :id.
+
+
+
+# Registro de PagoProductoUsuarios
+
+El endpoint permite registrar los Pagos de Productos de un Usuarios realizados en el inventario de una barberia.
+
+## Características del Endpoint
+
+- Método: POST,GET,PUT,DELETE
+- Ruta del Endpoint: `/PagoProductoUsuarios`
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
+
+```json
+{
+  "UsuarioProducto_Id": 123,   // El ID del UsuarioProducto asociado al pago (reemplaza 123 con un valor válido).
+  "Cantidad": 5,               // La cantidad del producto en el pago (reemplaza 5 con un valor válido).
+  "ValorUnitario": 1000,       // El valor unitario del producto en el pago (reemplaza 1000 con un valor válido).
+  "ValorTotal": 5000,          // El valor total del pago (reemplaza 5000 con un valor válido).
+  "Activo": 1              // Indica si el pago está activo o no (1 o 0).
+}
+```
+
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/PagoProductoUsuarios/1
+```
+
+donde le 1 es el id, :id.
+
