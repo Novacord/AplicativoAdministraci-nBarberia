@@ -132,7 +132,7 @@ Este proyecto implementa un endpoint que permite registrar nuevos usuarios en la
 
 ## Características del Endpoint
 
-- Método: POST
+- Métodos: POST,GET,PUT,DELETE
 - Ruta del Endpoint: `/registrar-usuario`
 - Permite el registro de nuevos usuarios en la aplicación.
 - Los datos del usuario a registrar deben enviarse en el cuerpo de la solicitud en formato JSON.
@@ -222,3 +222,51 @@ todos los datos listados esta en un json mostrara el id del usuario, el nombre d
     "Administrador": 18800
   }
 ```
+
+# Registro de Trabajos
+
+El endpoint permite registrar los trabajos realizados en una barbería. Cada trabajo está asociado a un barbero y un servicio específico.
+
+## Características del Endpoint
+
+- Método: POST,DELETE
+- Ruta del Endpoint: `/ganancias`
+- Permite listar la ganancia diaria, mensual y anualmente.
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud para registrar un nuevo usuario debe tener el siguiente formato en JSON:
+
+jsonCopy code
+
+```json
+{  
+ "Servicio_Id": 1,  
+ "Usuario_Id": 5,  
+ "Valor": 12000,  
+ "observaciones": "Corte de Pelo" 
+}
+```
+
+## Respuestas del Endpoint
+
+El endpoint proporcionará las siguientes respuestas:
+
+- **Éxito (Código de Estado 200)**: Si el registro es exitoso, el servidor responderá con un mensaje indicando que el trabajo ha sido registrado correctamente.
+
+```
+Registro exitosamente
+```
+
+- **Error de Solicitud (Código de Estado 406)**: es que unos de los parámetros no cumple con el formato requerido y mostrara o el numero de caracteres no cumple, ejemplo:
+
+```
+El "nombre del parametro" no cumple con el formato
+```
+
+- **Error de Solicitud (Código de Estado 422)**: es que unos de los parámetros no esta y es obligatorio ponerlo un ejemplo:
+
+```
+El parametro "nombre del parametro" es obligatorio
+```
+

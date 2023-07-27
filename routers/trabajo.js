@@ -36,7 +36,7 @@ appTrabajos.post('/',middlewareTrabajos,(req, res) => {
             if(err) {
                 res.send(err);
             }else if(data){
-                res.send(data);
+                res.send("Registro exitosamente");
             }
         }
     )
