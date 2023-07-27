@@ -2,6 +2,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewarePrestamos from "../middleware/middlewarePrestamos.js";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ appPrestamoBarberos.use((req, res, next) => {
     next();
 })
 
-appPrestamoBarberos.post('/',middlewarePrestamos, (req, res) => {
+appPrestamoBarberos.post('/',middlewarePrestamos,validateToken, (req, res) => {
     const { Usuario_Id, Producto_Id, Cantidad, Activo } = req.body;
   
     con.query(
@@ -35,7 +36,7 @@ appPrestamoBarberos.post('/',middlewarePrestamos, (req, res) => {
     );
   });
 
-  appPrestamoBarberos.get('/', (req, res) => {
+  appPrestamoBarberos.get('/',validateToken, (req, res) => {
     con.query(
       /*sql*/ `
       SELECT * FROM UsuarioProductos
@@ -50,7 +51,7 @@ appPrestamoBarberos.post('/',middlewarePrestamos, (req, res) => {
     );
   });
 
-  appPrestamoBarberos.put('/:id',middlewarePrestamos, (req, res) => {
+  appPrestamoBarberos.put('/:id',middlewarePrestamos,validateToken, (req, res) => {
     const usuarioProductoId = req.params.id;
     const { Usuario_Id, Producto_Id, Cantidad, Activo } = req.body;
   
@@ -71,7 +72,7 @@ appPrestamoBarberos.post('/',middlewarePrestamos, (req, res) => {
     );
   });
 
-  appPrestamoBarberos.delete('/:id', (req, res) => {
+  appPrestamoBarberos.delete('/:id', validateToken,(req, res) => {
     const usuarioProductoId = req.params.id;
   
     con.query(

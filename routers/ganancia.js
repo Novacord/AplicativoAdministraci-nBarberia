@@ -1,6 +1,7 @@
 import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ appGanancias.use((req, res, next) => {
     next();
 })
 
-appGanancias.get('/year',(req, res) => {
+appGanancias.get('/year',validateToken,(req, res) => {
         con.query(
             /*sql*/`SELECT t2.Usuario_Id, t2.Nombre AS Barber,
                         SUM(t1.Valor) AS ValorTotal,
@@ -31,7 +32,7 @@ appGanancias.get('/year',(req, res) => {
         );
 });
 
-appGanancias.get('/month',(req, res) => {
+appGanancias.get('/month',validateToken,(req, res) => {
     if(req.query.year && req.query.month){
         con.query(
             /*sql*/`SELECT t2.Usuario_Id, t2.Nombre AS Barber,
@@ -51,7 +52,7 @@ appGanancias.get('/month',(req, res) => {
     }
 });
 
-appGanancias.get('/day',(req, res) => {
+appGanancias.get('/day',validateToken,(req, res) => {
         con.query(
             /*sql*/`SELECT t2.Usuario_Id, t2.Nombre AS Barber,
                         SUM(t1.Valor) AS ValorTotal,

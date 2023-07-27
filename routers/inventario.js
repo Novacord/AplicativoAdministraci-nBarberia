@@ -1,6 +1,7 @@
 import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -15,7 +16,7 @@ appInventario.use((req, res, next) => {
     next();
 })
 
-appInventario.get('/',(req, res) => {
+appInventario.get('/',validateToken,(req, res) => {
         con.query(
             /*sql*/`SELECT 
             Nombre AS Producto,

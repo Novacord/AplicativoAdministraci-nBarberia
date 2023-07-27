@@ -2,6 +2,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewarePrestamos from "../middleware/middlewarePrestamos.js";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ appProductos.use((req, res, next) => {
     next();
 })
 
-appProductos.post('/', (req, res) => {
+appProductos.post('/', validateToken,(req, res) => {
     const { Nombre, ValorVenta, InventarioBase, Activo } = req.body;
   
     con.query(
@@ -35,7 +36,7 @@ appProductos.post('/', (req, res) => {
     );
   });
 
-  appProductos.get('/', (req, res) => {
+  appProductos.get('/', validateToken,(req, res) => {
     con.query(
       /*sql*/ `
       SELECT * FROM Productos
@@ -50,7 +51,7 @@ appProductos.post('/', (req, res) => {
     );
   });
 
-  appProductos.put('/:id', (req, res) => {
+  appProductos.put('/:id',validateToken, (req, res) => {
     const productoId = req.params.id;
     const { Nombre, ValorVenta, InventarioBase, Activo } = req.body;
   
@@ -72,7 +73,7 @@ appProductos.post('/', (req, res) => {
   });
 
 
-  appProductos.delete('/:id', (req, res) => {
+  appProductos.delete('/:id', validateToken,(req, res) => {
     const productoId = req.params.id;
   
     con.query(

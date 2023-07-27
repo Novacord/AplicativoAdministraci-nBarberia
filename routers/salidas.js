@@ -2,6 +2,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewareSalidas from "../middleware/middlewareSalidas.js";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ appSalidas.use((req, res, next) => {
 })
 
 
-appSalidas.get('/', (req, res) => {
+appSalidas.get('/', validateToken,(req, res) => {
     con.query(
       /*sql*/ `
       SELECT * FROM salidas
@@ -32,7 +33,7 @@ appSalidas.get('/', (req, res) => {
     );
 });
 
-appSalidas.post('/',middlewareSalidas,(req, res) => {
+appSalidas.post('/',middlewareSalidas,validateToken,(req, res) => {
     const { Producto_Id, Cantidad, ValorUnitario, Observaciones, Activo } = req.body;
     const fechaRegistro = new Date().toISOString().slice(0, 19).replace('T', ' ');
   
@@ -52,7 +53,7 @@ appSalidas.post('/',middlewareSalidas,(req, res) => {
     );
   });
 
-  appSalidas.put('/:id',middlewareSalidas, (req, res) => {
+  appSalidas.put('/:id',middlewareSalidas, validateToken,(req, res) => {
     const entradaId = req.params.id;
     const { Producto_Id, Cantidad, ValorUnitario, Observaciones, Activo } = req.body;
   
@@ -73,7 +74,7 @@ appSalidas.post('/',middlewareSalidas,(req, res) => {
     );
   });
 
-  appSalidas.delete('/:id', (req, res) => {
+  appSalidas.delete('/:id',validateToken, (req, res) => {
     const entradaId = req.params.id;
   
     con.query(

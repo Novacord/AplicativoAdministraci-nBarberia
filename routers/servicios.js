@@ -2,6 +2,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewareServicios from "../middleware/middlewareServicios.js";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -26,7 +27,7 @@ appServicios.get('/',(req, res) => {
     )
 })
 
-appServicios.post('/', middlewareServicios,(req, res) => {
+appServicios.post('/', middlewareServicios,validateToken,(req, res) => {
     const { Nombre, Valor, Activo } = req.body;
     con.query(
       /*sql*/ `
@@ -44,7 +45,7 @@ appServicios.post('/', middlewareServicios,(req, res) => {
     );
   });
 
-  appServicios.put('/:id',middlewareServicios, (req, res) => {
+  appServicios.put('/:id',middlewareServicios,validateToken, (req, res) => {
     const servicioId = req.params.id;
     const { Nombre, Valor, Activo } = req.body;
     con.query(
@@ -65,7 +66,7 @@ appServicios.post('/', middlewareServicios,(req, res) => {
     );
   });
 
-  appServicios.delete('/:id', (req, res) => {
+  appServicios.delete('/:id',validateToken, (req, res) => {
     const servicioId = req.params.id;
   
     con.query(

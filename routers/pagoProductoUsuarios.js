@@ -2,6 +2,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewarePrestamos from "../middleware/middlewarePrestamos.js";
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -16,7 +17,7 @@ appPagoProductoUsuarios.use((req, res, next) => {
     next();
 })
 
-appPagoProductoUsuarios.post('/', (req, res) => {
+appPagoProductoUsuarios.post('/',validateToken, (req, res) => {
     const { UsuarioProducto_Id, Cantidad, ValorUnitario, ValorTotal, Activo } = req.body;
   
     con.query(
@@ -35,7 +36,7 @@ appPagoProductoUsuarios.post('/', (req, res) => {
     );
   });
 
-appPagoProductoUsuarios.get('/', (req, res) => {
+appPagoProductoUsuarios.get('/',validateToken, (req, res) => {
     con.query(
       /*sql*/ `
       SELECT * FROM PagoUsuarioProducto
@@ -50,7 +51,7 @@ appPagoProductoUsuarios.get('/', (req, res) => {
     );
   });
 
-  appPagoProductoUsuarios.put('/:id', (req, res) => {
+  appPagoProductoUsuarios.put('/:id',validateToken, (req, res) => {
     const pagoUsuarioProductoId = req.params.id;
     const { UsuarioProducto_Id, Cantidad, ValorUnitario, ValorTotal, Activo } = req.body;
   
@@ -71,7 +72,7 @@ appPagoProductoUsuarios.get('/', (req, res) => {
     );
   });
 
-  appPagoProductoUsuarios.delete('/:id', (req, res) => {
+  appPagoProductoUsuarios.delete('/:id',validateToken, (req, res) => {
     const pagoUsuarioProductoId = req.params.id;
   
     con.query(

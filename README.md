@@ -92,6 +92,7 @@ npm i
 ```dotevn
 MY_SERVER={"hostname": "nombre del Host", "port": 3000}
 MY_CONNECTION = { "host": "localhost", "user": "root", "password": "", "database": "barber", "port": 3306}
+JWT_PRIVATE_KEY = "codigo del token que quiera"
 ```
 
 - para inicializar el servidor de express:
@@ -186,6 +187,22 @@ http://HostName:port/registrar-usuario/1
 ```
 
 donde le 1 es el id, :id.
+
+## token de usuario
+
+Al crear un usuario se generara un token que debe usar para cualquier consulta de cualquier endpoint que requiera, al crear un usuario le aparesera el token asi:
+
+```json
+{
+"message": "registro exitoso", 			          			     "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqc29uIjp7Ik5vbWJyZSI6Ikpvc2UxMjMiLCJEb2N1bWVudG8iOiIxMDk3MDk0NDE1IiwiQ29ycmVvIjoiam9zZUBnbWFpbC5jb20iLCJDbGF2ZSI6InB1dG9lbHF1ZWxvbGVhIiwiQWN0aXZvIjoxLCJSb2xfSWQiOjF9LCJpYXQiOjE2OTA0ODc4MzcsImV4cCI6MTY5MDU3NDIzN30.n03zBb3GkD6-Wh4sA4ltLsVT9Bd19-LUEBAuLrIIUFs"  
+}
+```
+
+solo durara 24 horas el token.
+
+## Tener en cuenta
+
+para utilizar el token y probarlo en la extencion thunder client colocar en headers Authorization y de seguida el token
 
 # Ganancias del barbero y el administrador
 

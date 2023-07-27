@@ -3,6 +3,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewareBarberos from '../middleware/middlewareBarberos.js';
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -17,7 +18,7 @@ appBarberos.use((req, res, next) => {
     next();
 })
 
-appBarberos.get('/',(req, res) => {
+appBarberos.get('/',validateToken,(req, res) => {
     con.query(
         /*sql*/`SELECT * FROM Usuarios`,
         (err, data) => {
@@ -26,7 +27,7 @@ appBarberos.get('/',(req, res) => {
     );
 });
 
-appBarberos.put('/:id', middlewareBarberos, (req, res) => {
+appBarberos.put('/:id', middlewareBarberos,validateToken, (req, res) => {
     const usuarioId = req.params.id;
     const info = req.body;
     con.query(
@@ -66,7 +67,8 @@ appBarberos.put('/:id', middlewareBarberos, (req, res) => {
     );
   });
 
-appBarberos.post('/', middlewareBarberos, (req, res) => {
+appBarberos.post('/', middlewareBarberos,generateToken, (req, res) => {
+    
     let info = req.body;
     con.query(
         /*sql*/ `INSERT INTO Usuarios(Nombre, Documento, Correo, Clave, Activo) 
@@ -86,7 +88,7 @@ appBarberos.post('/', middlewareBarberos, (req, res) => {
                         if (err) {
                             res.status(400).send(err);
                         } else {
-                            res.status(200).send("registro exitoso");
+                            res.status(200).send({ message: "registro exitoso", token: req.auth });
                         }
                     }
                 );
@@ -95,7 +97,7 @@ appBarberos.post('/', middlewareBarberos, (req, res) => {
     );
 });
 
-appBarberos.delete('/:id', (req, res) => {
+appBarberos.delete('/:id',validateToken, (req, res) => {
     const usuarioId = req.params.id;
     con.query(
       /*sql*/ `

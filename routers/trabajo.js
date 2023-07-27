@@ -3,6 +3,7 @@ import { Router } from "express";
 import mysql from "mysql2";
 import dotenv from "dotenv";
 import middlewareTrabajos from '../middleware/middlewareTrabajos.js';
+import { generateToken, validateToken } from "../jwt/tokens.js";
 
 dotenv.config();
 
@@ -26,7 +27,7 @@ appTrabajos.get('/', (req, res) => {
     )
 })
 
-appTrabajos.post('/',middlewareTrabajos,(req, res) => {
+appTrabajos.post('/',middlewareTrabajos,validateToken,(req, res) => {
     let info = req.body;
     console.log(info);
     con.query(
@@ -42,7 +43,7 @@ appTrabajos.post('/',middlewareTrabajos,(req, res) => {
     )
 })
 
-appTrabajos.delete('/:id', (req, res) => {
+appTrabajos.delete('/:id', validateToken,(req, res) => {
     con.query(
         /*sql*/ `DELETE FROM Trabajos WHERE Trabajo_Id = ?`,
         [req.params.id],
