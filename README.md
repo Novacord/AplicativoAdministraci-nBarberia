@@ -175,6 +175,16 @@ El "nombre del parametro" no cumple con el formato
 El parametro "nombre del parametro" es obligatorio
 ```
 
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/registrar-usuario/1
+```
+
+donde le 1 es el id, :id.
+
 # Ganancias del barbero y el administrador
 
 Este proyecto implementa un endpoint que permite calcular la ganancia de lo que gano el barbero y el administrador diaria, mensual y anual teniendo en cuenta que el barbero gana el 60% y el administrador gana el 40%
@@ -206,7 +216,7 @@ http://HostName:port/ganancias/month?year=2023&month=6
 para obtener la ganancia por mes debemos hacer una petición `/ganancias/day` mandando un parámetro date con la fecha exacta del día que queremos saber cuanto gano con la siguiente estructura como ejemplo:
 
 ```http
-http://HostName:port/ganancias/day?date=2023-06-03
+http://HostName:port/registrar-usuario/day?date=2023-06-03
 ```
 
 ## Respuestas del Endpoint
@@ -231,11 +241,10 @@ El endpoint permite registrar los trabajos realizados en una barbería. Cada tra
 
 - Método: POST,DELETE
 - Ruta del Endpoint: `/ganancias`
-- Permite listar la ganancia diaria, mensual y anualmente.
 
 ## Estructura del Cuerpo de la Solicitud
 
-El cuerpo de la solicitud para registrar un nuevo usuario debe tener el siguiente formato en JSON:
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
 jsonCopy code
 
@@ -270,3 +279,67 @@ El "nombre del parametro" no cumple con el formato
 El parametro "nombre del parametro" es obligatorio
 ```
 
+## DELETE del endpoint
+
+para hacer DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/ganancias/1
+```
+
+donde le 1 es el id, :id.
+
+# Registro de Servicios
+
+El endpoint permite registrar los Servicios realizados en una barbería.
+
+## Características del Endpoint
+
+- Método: POST,GET,PUT,DELETE
+- Ruta del Endpoint: `/servicios`
+
+## Estructura del Cuerpo de la Solicitud
+
+El cuerpo de la solicitud debe tener el siguiente formato en JSON:
+
+jsonCopy code
+
+```json
+{
+  "Nombre": "Nombre del Servicio",
+  "Valor": 1500,
+  "Activo": 1
+}
+```
+
+## Respuestas del Endpoint
+
+El endpoint proporcionará las siguientes respuestas:
+
+- **Éxito (Código de Estado 200)**: Si el registro es exitoso, el servidor responderá con un mensaje indicando que el Servicios ha sido registrado correctamente.
+
+```
+registro exitoso
+```
+
+- **Error de Solicitud (Código de Estado 406)**: es que unos de los parámetros no cumple con el formato requerido y mostrara o el numero de caracteres no cumple, ejemplo:
+
+```
+El "nombre del parametro" no cumple con el formato
+```
+
+- **Error de Solicitud (Código de Estado 422)**: es que unos de los parámetros no esta y es obligatorio ponerlo un ejemplo:
+
+```
+El parametro "nombre del parametro" es obligatorio
+```
+
+## PUT y DELETE del endpoint
+
+para hacer el PUT y el DELETE debe colocar el id como parámetro de la petición http ejemplo:
+
+```http
+http://HostName:port/servicios/1
+```
+
+donde le 1 es el id, :id.
