@@ -269,10 +269,10 @@ jsonCopy code
 
 ```json
 {  
- "Servicio_Id": 1,  
- "Usuario_Id": 5,  
- "Valor": 12000,  
- "observaciones": "Corte de Pelo" 
+ "servicio-id": 1,  
+ "usuario-id": 5,  
+ "Valor-trabajo": 12000,  
+ "observaciones-trabajo": "Corte de Pelo" 
 }
 ```
 
@@ -325,9 +325,9 @@ jsonCopy code
 
 ```json
 {
-  "Nombre": "Nombre del Servicio",
-  "Valor": 1500,
-  "Activo": 1
+  "nombre-servicio": "Nombre del Servicio",
+  "valor-servicio": 1500,
+  "activo-servicio": 1
 }
 ```
 
@@ -380,11 +380,11 @@ El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
 ```json
 {
-  "Producto_Id": 123,        // El ID del producto asociado a la entrada (reemplaza 123 con un valor válido).
-  "Cantidad": 5,             // La cantidad de productos en la entrada (reemplaza 5 con un valor válido).
-  "ValorUnitario": 1000,     // El valor unitario del producto (reemplaza 1000 con un valor válido).
-  "Observaciones": "Nueva entrada de prueba.",   // Observaciones sobre la entrada (opcional).
-  "Activo": 1             // Indica si la entrada está activa o no (1 o 0).
+  "producto-entrada": 123,        // El ID del producto asociado a la entrada (reemplaza 123 con un valor válido).
+  "cantidad-entrada": 5,             // La cantidad de productos en la entrada (reemplaza 5 con un valor válido).
+  "valorU-entrada": 1000,     // El valor unitario del producto (reemplaza 1000 con un valor válido).
+  "observaciones-entrada": "Nueva entrada de prueba.",   // Observaciones sobre la entrada (opcional).
+  "activo-entrada": 1             // Indica si la entrada está activa o no (1 o 0).
 }
 ```
 
@@ -437,11 +437,11 @@ El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
 ```json
 {
-  "Producto_Id": 123,        // El ID del producto asociado a la salida (reemplaza 123 con un valor válido).
-  "Cantidad": 5,             // La cantidad de productos en la salida (reemplaza 5 con un valor válido).
-  "ValorUnitario": 1000,     // El valor unitario del producto (reemplaza 1000 con un valor válido).
-  "Observaciones": "Nueva entrada de prueba.",   // Observaciones sobre la salida (opcional).
-  "Activo": 1             // Indica si la salida está activa o no (1 o 0).
+  "producto-salidas": 123,        // El ID del producto asociado a la salida (reemplaza 123 con un valor válido).
+  "cantidad-salidas": 5,             // La cantidad de productos en la salida (reemplaza 5 con un valor válido).
+  "valorU-salidas": 1000,     // El valor unitario del producto (reemplaza 1000 con un valor válido).
+  "observaciones-salidas": "Nueva entrada de prueba.",   // Observaciones sobre la salida (opcional).
+  "activo-salidas": 1             // Indica si la salida está activa o no (1 o 0).
 }
 ```
 
@@ -494,10 +494,10 @@ El cuerpo de la solicitud debe tener el siguiente formato en JSON:
 
 ```json
 {
-  "Usuario_Id": 456,        // El ID del usuario asociado a la relación (reemplaza 456 con un valor válido).
-  "Producto_Id": 789,       // El ID del producto asociado a la relación (reemplaza 789 con un valor válido).
-  "Cantidad": 3,            // La cantidad de productos en la relación (reemplaza 3 con un valor válido).
-  "Activo": 1           // Indica si la relación está activa o no (1 o 0).
+  "usuario-prestamo": 456,        // El ID del usuario asociado a la relación (reemplaza 456 con un valor válido).
+  "producto-prestamo": 789,       // El ID del producto asociado a la relación (reemplaza 789 con un valor válido).
+  "cantidad-prestamo": 3,            // La cantidad de productos en la relación (reemplaza 3 con un valor válido).
+  "activo-prestamo": 1           // Indica si la relación está activa o no (1 o 0).
 }
 ```
 
