@@ -26,6 +26,8 @@ Este es un aplicativo diseñado para administrar el control de entradas y salida
 
 ##  Base de Datos
 
+el archivo que esta la base de datos completa esta en db y el archivo se llama db.sql
+
 1. Crea la base de datos "barber":
 
 ```sql
